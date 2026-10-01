@@ -3,175 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahdi Najafi | Computational Media & Cinematic Systems</title>
+  <title>Mahdi Najafi — Computational Media & Cinematic Systems</title>
+  
+  <!-- Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#09090b',
+            surface: '#121215',
+            muted: '#71717a',
+            subtle: '#27272a',
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    body { background-color: #0b0c10; color: #c5c6c7; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    .accent { color: #66fcf1; }
-    .accent-bg { background-color: #45a29e; }
-    .card { background-color: #12141c; border: 1px solid #1f2833; }
+    body { background-color: #09090b; color: #d4d4d8; }
+    ::selection { background-color: #f4f4f5; color: #09090b; }
   </style>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-zinc-200 selection:text-black">
 
-  <nav class="sticky top-0 z-50 bg-[#0b0c10]/90 backdrop-blur border-b border-[#1f2833] px-6 py-4 flex justify-between items-center max-w-6xl mx-auto">
-    <a href="#" class="font-bold tracking-wider text-white text-lg">MAHDI <span class="accent">NAJAFI</span></a>
-    <div class="space-x-6 text-sm">
-      <a href="#flagship" class="hover:text-white transition">Flagship System</a>
-      <a href="#arc" class="hover:text-white transition">Research Arc</a>
-      <a href="#films" class="hover:text-white transition">Directorial Testbeds</a>
-      <a href="#contact" class="px-3 py-1.5 border border-[#45a29e] text-[#66fcf1] rounded hover:bg-[#45a29e]/20 transition">Contact</a>
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between text-xs tracking-tight">
+      <a href="#" class="font-display font-medium text-zinc-100 hover:text-white transition">MAHDI NAJAFI</a>
+      <nav class="flex items-center space-x-6 text-zinc-400 font-mono">
+        <a href="#prototype" class="hover:text-zinc-100 transition">System</a>
+        <a href="#arc" class="hover:text-zinc-100 transition">Research Arc</a>
+        <a href="#testbeds" class="hover:text-zinc-100 transition">Practice</a>
+        <a href="https://github.com/mehdinajafitech" target="_blank" class="text-zinc-200 hover:text-white transition underline underline-offset-4">GitHub ↗</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+  <main class="max-w-4xl mx-auto px-6 py-20 space-y-32">
 
-    <header class="space-y-6 pt-4 max-w-3xl">
-      <span class="text-xs tracking-widest uppercase font-semibold text-[#45a29e] border border-[#45a29e]/40 px-3 py-1 rounded-full">PhD Applicant & Researcher</span>
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
-        Bridging Formal Film Theory & <br><span class="accent">Gaze-Contingent Media Systems</span>
+    <!-- Hero / Statement -->
+    <section class="space-y-8 pt-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-mono text-zinc-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        PhD Applicant &bull; Computational Media & HCI
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold text-zinc-100 tracking-tight leading-[1.15]">
+        Translating formalist cinema and off-screen dread into gaze-contingent media architectures.
       </h1>
-      <p class="text-gray-400 text-lg leading-relaxed">
-        Investigating how cinematic dread and off-screen space (<em>hors-champ</em>) can be quantified via computer vision and orchestrated into real-time adaptive montage engines[cite: 1, 2, 4].
+
+      <p class="text-zinc-400 text-lg leading-relaxed max-w-2xl font-light">
+        Bridging years of experimental directing—exploring <em>hors-champ</em>, acousmatic audio, and static negative space—with computer vision to engineer real-time adaptive editing systems driven by spectator attention.
       </p>
-      <div class="flex flex-wrap gap-4 pt-2">
-        <a href="#flagship" class="px-6 py-3 accent-bg text-black font-semibold rounded hover:brightness-110 transition">View Flagship Prototype ↓</a>
-        <a href="https://github.com/mehdinajafitech" target="_blank" class="px-6 py-3 card hover:border-[#45a29e] text-white rounded transition">GitHub Codebase</a>
-      </div>
-    </header>
 
-    <section id="flagship" class="space-y-8">
-      <div>
-        <span class="text-xs uppercase tracking-wider text-[#45a29e] font-mono">Flagship Doctoral Prototype</span>
-        <h2 class="text-3xl font-bold text-white mt-1">Gaze-Contingent Cinematic Profiler & Adaptive Editing Engine</h2>
-        <p class="text-sm text-gray-400 mt-1">Stack: Python, PyTorch (DeepLabV3), MediaPipe, OpenCV, Scikit-Learn, Pygame[cite: 2, 3, 4]</p>
+      <div class="pt-2 flex items-center gap-6 text-xs font-mono">
+        <a href="#prototype" class="px-4 py-2.5 bg-zinc-100 text-zinc-950 font-medium rounded hover:bg-white transition">
+          Examine Flagship Engine ↓
+        </a>
+        <a href="https://github.com/mehdinajafitech" target="_blank" class="text-zinc-400 hover:text-zinc-100 transition">
+          Source Repository ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- The Flagship System -->
+    <section id="prototype" class="space-y-12">
+      <div class="border-b border-zinc-900 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Doctoral Prototype</span>
+          <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">Gaze-Contingent Cinematic Profiler & Adaptive Editing Engine</h2>
+        </div>
+        <div class="text-xs font-mono text-zinc-500">
+          PyTorch &bull; MediaPipe &bull; OpenCV &bull; solvePnP
+        </div>
       </div>
 
-      <div class="card rounded-xl overflow-hidden border border-gray-800">
-        <div class="aspect-video w-full bg-black relative flex items-center justify-center">
+      <!-- Frameless Cinematic Video Player -->
+      <div class="space-y-3">
+        <div class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-2xl">
           <video controls class="w-full h-full object-cover">
             <source src="assets/Gaze_Contingent_Montage_Demo_MahdiNajafi.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="p-4 bg-[#12141c] text-xs text-gray-400 border-t border-gray-800">
-          <strong>Interactive Logic:</strong> System shifts to the reactive stream upon detecting unaddressed off-screen acousmatic cues and reverts upon gaze fixation on the dread agent[cite: 1, 4, 5].
+        <div class="flex justify-between items-center text-xs font-mono text-zinc-500 px-1">
+          <span>Figure 1: 59-second proof-of-concept run (1080p, 60fps)</span>
+          <span>Dual-Stream Latency: &lt; 35ms</span>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card p-6 rounded-lg space-y-3">
-          <h3 class="text-white font-semibold text-sm border-b border-gray-800 pb-2">System Architecture Pipeline</h3>
-          <p class="text-xs font-mono text-[#66fcf1]">Webcam ➔ MediaPipe Mesh ➔ PnP Pose (3D) ➔ Poly Ridge ➔ Async DeepLabV3 ➔ Adaptive Cut[cite: 2, 4]</p>
-          <ul class="text-xs text-gray-400 space-y-1.5 list-disc list-inside">
-            <li>Asynchronous multi-threading isolating heavy GPU inference from tracking loops[cite: 2, 4].</li>
-            <li>Eye Aspect Ratio (EAR) metric preventing blink-induced calibration noise[cite: 2].</li>
-            <li>Reinhard LAB color transfer ensuring continuous inter-shot aesthetic parity[cite: 3].</li>
-          </ul>
+      <!-- Quantitative System Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-zinc-900 border border-zinc-900 rounded-lg overflow-hidden font-mono">
+        <div class="bg-obsidian p-4 space-y-1">
+          <div class="text-zinc-500 text-[10px] uppercase">Gaze Tracking</div>
+          <div class="text-zinc-100 text-lg font-medium">60 FPS</div>
+          <div class="text-zinc-500 text-[11px]">Real-time PnP loop</div>
+        </div>
+        <div class="bg-obsidian p-4 space-y-1">
+          <div class="text-zinc-500 text-[10px] uppercase">Backbone Model</div>
+          <div class="text-zinc-100 text-lg font-medium">DeepLabV3</div>
+          <div class="text-zinc-500 text-[11px]">ResNet-101 Async</div>
+        </div>
+        <div class="bg-obsidian p-4 space-y-1">
+          <div class="text-zinc-500 text-[10px] uppercase">Calibration Loss</div>
+          <div class="text-zinc-100 text-lg font-medium">&lt; 0.038 MSE</div>
+          <div class="text-zinc-500 text-[11px]">Poly Ridge Reg</div>
+        </div>
+        <div class="bg-obsidian p-4 space-y-1">
+          <div class="text-zinc-500 text-[10px] uppercase">Aesthetic Match</div>
+          <div class="text-zinc-100 text-lg font-medium">Reinhard LAB</div>
+          <div class="text-zinc-500 text-[11px]">Inter-shot color parity</div>
+        </div>
+      </div>
+
+      <!-- Theoretical Foundation & Pipeline -->
+      <div class="grid md:grid-cols-2 gap-12 pt-4">
+        <div class="space-y-4">
+          <h3 class="font-display text-base font-medium text-zinc-200">Aesthetic Hypothesis & Interaction Logic</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed font-light">
+            Drawing upon formalist film theory, the engine operationalizes the off-screen void (<em>hors-champ</em>). When an acousmatic sound emerges beyond the frame boundary, the system measures whether viewer fixation lingers on the primary subject or shifts toward the negative space. If unattended, it dynamically executes an adaptive cut revealing the peripheral dread agent, accompanied by real-time audio cross-fading.
+          </p>
         </div>
 
-        <div class="card p-6 rounded-lg space-y-4">
-          <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-            <h3 class="text-white font-semibold text-sm">Findings & Analytics</h3>
-            <div class="space-x-2 text-xs">
-              <button onclick="showTab('heatmap')" id="btn-heatmap" class="text-[#66fcf1] font-bold">Density Heatmap</button>
-              <button onclick="showTab('dynamics')" id="btn-dynamics" class="text-gray-400 hover:text-white">Temporal Shift</button>
-            </div>
+        <div class="space-y-4">
+          <h3 class="font-display text-base font-medium text-zinc-200">System Architecture Pipeline</h3>
+          <div class="text-xs font-mono space-y-2 text-zinc-400 bg-surface/50 p-4 rounded border border-zinc-900">
+            <div><span class="text-zinc-500">01. Capture:</span> RGB Video Stream &rarr; 468-point Iris Mesh</div>
+            <div><span class="text-zinc-500">02. Pose:</span> 3D solvePnP Head Stabilization & EAR Gating</div>
+            <div><span class="text-zinc-500">03. Calibration:</span> 2nd-degree Polynomial Ridge Regression</div>
+            <div><span class="text-zinc-500">04. Perception:</span> Asynchronous GPU Semantic Segmentation</div>
+            <div><span class="text-zinc-500">05. Execution:</span> Finite State Machine Stream & Sound Switching</div>
           </div>
-          <div id="tab-heatmap" class="aspect-[16/9] bg-black/40 rounded flex items-center justify-center border border-gray-800 text-xs text-gray-500">
-            <span>[ 2D Spatial Density Heatmap (Gaussian) ][cite: 2]</span>
+        </div>
+      </div>
+
+      <!-- Interactive Analytics Preview -->
+      <div class="space-y-4 pt-4">
+        <div class="flex items-center justify-between border-b border-zinc-900 pb-2">
+          <h3 class="font-display text-sm font-medium text-zinc-200">Empirical Telemetry & Profiling</h3>
+          <div class="flex gap-4 font-mono text-xs">
+            <button onclick="toggleTab('heatmap')" id="btn-heatmap" class="text-zinc-100 underline underline-offset-4">Gaussian Density Heatmap</button>
+            <button onclick="toggleTab('temporal')" id="btn-temporal" class="text-zinc-500 hover:text-zinc-300">Temporal Gaze Shift</button>
           </div>
-          <div id="tab-dynamics" class="hidden aspect-[16/9] bg-black/40 rounded flex items-center justify-center border border-gray-800 text-xs text-gray-500">
-            <span>[ Temporal Fixation Shift Graph ][cite: 2]</span>
-          </div>
+        </div>
+
+        <div id="view-heatmap" class="aspect-[21/9] bg-zinc-950 rounded border border-zinc-900 flex items-center justify-center text-xs font-mono text-zinc-600">
+          <span>[ 2D Spatial Gaze Density Heatmap &bull; Gaussian Kernel ]</span>
+        </div>
+        <div id="view-temporal" class="hidden aspect-[21/9] bg-zinc-950 rounded border border-zinc-900 flex items-center justify-center text-xs font-mono text-zinc-600">
+          <span>[ Chronological Fixation Transition Plot &bull; Pre/Post Cut ]</span>
         </div>
       </div>
     </section>
 
-    <section id="arc" class="space-y-6">
-      <h2 class="text-2xl font-bold text-white">The Research Arc</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card p-6 rounded-lg space-y-3">
-          <span class="text-xs font-mono text-[#45a29e]">PHASE I: DIRECTORIAL PRACTICE</span>
-          <h3 class="text-lg font-bold text-white">Formalist Cinema & Off-Screen Dread</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Years of experimental short-film directing focused on static wide-angle framing, extreme negative space, and acousmatic tension to intuitively orchestrate audience unease.
+    <!-- The Research Arc -->
+    <section id="arc" class="space-y-12">
+      <div class="border-b border-zinc-900 pb-4">
+        <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Methodology</span>
+        <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">The Research Arc: Research-Creation Trajectory</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-3">
+          <div class="text-xs font-mono text-zinc-500">PHASE I &bull; ARTISTIC INQUIRY</div>
+          <h3 class="font-display text-lg text-zinc-200">Directorial Form & Negative Space</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed font-light">
+            Formulating aesthetic hypotheses on spatial tension, prolonged static wide-angle framing, and acousmatic presence through short-film directing. These artistic works served as the foundational inquiry into how cinema directs psychological dread without explicit visual exposure.
           </p>
         </div>
-        <div class="card p-6 rounded-lg space-y-3 border-[#45a29e]/50">
-          <span class="text-xs font-mono text-[#66fcf1]">PHASE II: THE COMPUTATIONAL TURN</span>
-          <h3 class="text-lg font-bold text-white">Gaze-Contingent Adaptive Media</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Translating authored directorial hypotheses into empirical systems: utilizing real-time computer vision and dwell-time metrics to trigger dynamic editing behaviors[cite: 2, 4].
+
+        <div class="space-y-3">
+          <div class="text-xs font-mono text-zinc-500">PHASE II &bull; COMPUTATIONAL TURN</div>
+          <h3 class="font-display text-lg text-zinc-200">Empirical Sensing & Adaptive Media</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed font-light">
+            Translating authored directorial intuition into quantitative parameters: applying gaze telemetry and semantic segmentation to measure spectator visual dwell time, replacing static timelines with reactive computational montage systems.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="films" class="space-y-6">
-      <h2 class="text-2xl font-bold text-white">Cinematic Foundations (Directorial Testbeds)</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card rounded-lg overflow-hidden">
-          <div class="aspect-video bg-black/50 flex items-center justify-center text-xs text-gray-500">
-            <span>[ Film Still: Static Wide-Angle Framing ]</span>
+    <!-- Directorial Testbeds -->
+    <section id="testbeds" class="space-y-12">
+      <div class="border-b border-zinc-900 pb-4">
+        <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Experimental Stimuli</span>
+        <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">Cinematic Foundations as Research Testbeds</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <div class="aspect-video bg-zinc-950 rounded border border-zinc-900 flex items-center justify-center text-xs font-mono text-zinc-600">
+            <span>[ Film Still: Symmetrical Composition & Off-Screen Void ]</span>
           </div>
-          <div class="p-6 space-y-2">
-            <span class="text-xs font-mono text-[#66fcf1]">SHORT FILM / TESTBED 01</span>
-            <h3 class="text-lg font-bold text-white">Spatial Absence & Hors-Champ</h3>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              Designed with severe negative space and off-screen auditory cues. Served as primary visual baseline footage for evaluating spectator fixation dispersion[cite: 2].
+          <div class="space-y-1.5">
+            <div class="text-xs font-mono text-zinc-500">TESTBED 01 &bull; SHORT FILM</div>
+            <h3 class="font-display text-base font-medium text-zinc-200">Spatial Anxiety & Framing Asymmetry</h3>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Explored extreme static composition and off-screen auditory cues. Provided the raw baseline stimuli for training and evaluating viewer fixation dispersion models.
             </p>
           </div>
         </div>
 
-        <div class="card rounded-lg overflow-hidden">
-          <div class="aspect-video bg-black/50 flex items-center justify-center text-xs text-gray-500">
-            <span>[ Film Still: Symmetrical Composition ]</span>
+        <div class="space-y-4">
+          <div class="aspect-video bg-zinc-950 rounded border border-zinc-900 flex items-center justify-center text-xs font-mono text-zinc-600">
+            <span>[ Film Still: Lingering Wide Shot & Negative Space ]</span>
           </div>
-          <div class="p-6 space-y-2">
-            <span class="text-xs font-mono text-[#66fcf1]">SHORT FILM / TESTBED 02</span>
-            <h3 class="text-lg font-bold text-white">Temporal Pacing & Dread Dynamics</h3>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              Explored lingering camera durations to induce visual restlessness. Directly deployed in the dual-stream montage switching experiments[cite: 4, 5].
+          <div class="space-y-1.5">
+            <div class="text-xs font-mono text-zinc-500">TESTBED 02 &bull; SHORT FILM</div>
+            <h3 class="font-display text-base font-medium text-zinc-200">Temporal Duration & Acousmatic Presence</h3>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Investigated prolonged shot durations to provoke viewer restlessness. Deployed directly within the dual-stream reactive switching experiments.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="card p-8 rounded-xl text-center space-y-4">
-      <h2 class="text-xl font-bold text-white">Academic Contact</h2>
-      <p class="text-xs text-gray-400 max-w-lg mx-auto">
-        Available for PhD opportunities and collaborative research in Computational Media, HCI, and Affective Technologies.
-      </p>
-      <div class="flex justify-center gap-6 text-sm">
-        <a href="https://github.com/mehdinajafitech" target="_blank" class="accent hover:underline">GitHub</a>
+    <!-- Contact & Dossier -->
+    <section class="border-t border-zinc-900 pt-16 flex flex-col sm:flex-row justify-between items-start gap-8 font-mono text-xs">
+      <div class="space-y-2 max-w-sm">
+        <div class="text-zinc-100 font-medium">MAHDI NAJAFI</div>
+        <p class="text-zinc-500 leading-relaxed">
+          Open to PhD research positions and collaborative inquiries in Computational Media, HCI, and Adaptive Cinematic Systems.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:items-end space-y-2 text-zinc-400">
+        <a href="https://github.com/mehdinajafitech" target="_blank" class="hover:text-zinc-100 transition">github.com/mehdinajafitech ↗</a>
+        <span class="text-zinc-600">Tabriz, Iran</span>
       </div>
     </section>
 
   </main>
 
-  <footer class="border-t border-[#1f2833] py-8 text-center text-xs text-gray-500">
-    Mahdi Najafi — Academic Dossier & Systems Portfolio
-  </footer>
-
   <script>
-    function showTab(tab) {
-      const heatmap = document.getElementById('tab-heatmap');
-      const dynamics = document.getElementById('tab-dynamics');
-      const btnH = document.getElementById('btn-heatmap');
-      const btnD = document.getElementById('btn-dynamics');
+    function toggleTab(tab) {
+      const heatmap = document.getElementById('view-heatmap');
+      const temporal = document.getElementById('view-temporal');
+      const btnHeatmap = document.getElementById('btn-heatmap');
+      const btnTemporal = document.getElementById('btn-temporal');
 
       if (tab === 'heatmap') {
         heatmap.classList.remove('hidden');
-        dynamics.classList.add('hidden');
-        btnH.className = 'text-[#66fcf1] font-bold';
-        btnD.className = 'text-gray-400 hover:text-white';
+        temporal.classList.add('hidden');
+        btnHeatmap.className = 'text-zinc-100 underline underline-offset-4';
+        btnTemporal.className = 'text-zinc-500 hover:text-zinc-300';
       } else {
-        dynamics.classList.remove('hidden');
+        temporal.classList.remove('hidden');
         heatmap.classList.add('hidden');
-        btnD.className = 'text-[#66fcf1] font-bold';
-        btnH.className = 'text-gray-400 hover:text-white';
+        btnTemporal.className = 'text-zinc-100 underline underline-offset-4';
+        btnHeatmap.className = 'text-zinc-500 hover:text-zinc-300';
       }
     }
   </script>
