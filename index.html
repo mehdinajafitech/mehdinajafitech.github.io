@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mahdi Najafi — Academic portfolio investigating formalist cinema, off-screen space, and gaze-contingent adaptive editing systems.">
   <title>Mahdi Najafi — Computational Media & Cinematic Systems</title>
   
   <!-- Editorial Typography -->
@@ -10,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,8 +25,9 @@
           colors: {
             obsidian: '#09090b',
             surface: '#121215',
+            subtle: '#18181b',
+            borderzinc: '#27272a',
             muted: '#71717a',
-            subtle: '#27272a',
           }
         }
       }
@@ -33,14 +36,18 @@
   <style>
     body { background-color: #09090b; color: #d4d4d8; }
     ::selection { background-color: #f4f4f5; color: #09090b; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
   </style>
 </head>
 <body class="antialiased selection:bg-zinc-200 selection:text-black">
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-zinc-900">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between text-xs tracking-tight">
-      <a href="#" class="font-display font-medium text-zinc-100 hover:text-white transition">MAHDI NAJAFI</a>
+  <!-- Header / Minimal Navigation -->
+  <header class="sticky top-0 z-50 bg-[#09090b]/85 backdrop-blur-md border-b border-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between text-xs tracking-tight">
+      <a href="#" class="font-display font-semibold text-zinc-100 hover:text-white transition">MAHDI NAJAFI</a>
       <nav class="flex items-center space-x-6 text-zinc-400 font-mono">
         <a href="#prototype" class="hover:text-zinc-100 transition">Flagship System</a>
         <a href="#arc" class="hover:text-zinc-100 transition">Research Arc</a>
@@ -50,10 +57,10 @@
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-20 space-y-32">
+  <main class="max-w-4xl mx-auto px-6 py-20 space-y-32">
 
     <!-- Hero / Statement -->
-    <section class="space-y-8 pt-6">
+    <section class="space-y-8 pt-4">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-mono text-zinc-400">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
         PhD Applicant &bull; Computational Media & HCI
@@ -64,20 +71,20 @@
       </h1>
 
       <p class="text-zinc-400 text-lg leading-relaxed max-w-2xl font-light">
-        Bridging years of experimental directing—investigating <em>hors-champ</em>, acousmatic sound, and static negative space—with computer vision to design adaptive editing architectures responsive to spectator gaze telemetry.
+        Bridging years of experimental directing—exploring <em>hors-champ</em>, acousmatic sound, and static negative space—with computer vision to engineer adaptive editing systems driven by spectator attention.
       </p>
 
       <div class="pt-2 flex items-center gap-6 text-xs font-mono">
         <a href="#prototype" class="px-4 py-2.5 bg-zinc-100 text-zinc-950 font-medium rounded hover:bg-white transition">
-          View Prototype Overview ↓
+          Examine Prototype Overview ↓
         </a>
         <a href="#testbeds" class="text-zinc-400 hover:text-zinc-100 transition">
-          Examine Directorial Testbeds &rarr;
+          Directorial Testbeds &rarr;
         </a>
       </div>
     </section>
 
-    <!-- The Flagship System (Case Study Format) -->
+    <!-- The Flagship System (Archival Case Study) -->
     <section id="prototype" class="space-y-12">
       <div class="border-b border-zinc-900 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
@@ -99,7 +106,7 @@
         </div>
         <div class="flex justify-between items-center text-xs font-mono text-zinc-500 px-1">
           <span>Figure 1: 59-second proof-of-concept run (1080p, 60fps)</span>
-          <span>Dual-Stream Switching Latency: &lt; 35ms</span>
+          <span>Dual-Stream Latency: &lt; 35ms</span>
         </div>
       </div>
 
@@ -130,9 +137,9 @@
       <!-- Theoretical Foundation & Pipeline -->
       <div class="grid md:grid-cols-2 gap-12 pt-4">
         <div class="space-y-4">
-          <h3 class="font-display text-base font-medium text-zinc-200">Aesthetic Hypothesis & Adaptive Logic</h3>
+          <h3 class="font-display text-base font-medium text-zinc-200">Aesthetic Hypothesis & Interactive Logic</h3>
           <p class="text-zinc-400 text-sm leading-relaxed font-light">
-            Rooted in formalist film theory, the engine operationalizes the off-screen void (<em>hors-champ</em>). When an acousmatic sound emerges beyond the frame boundary, the system determines whether viewer fixation lingers on the foreground subject or shifts toward the empty negative space. If unattended, the finite state machine executes an adaptive cut revealing the peripheral dread agent, dynamically matched by real-time audio cross-fading.
+            Drawing upon formalist film theory, the engine operationalizes the off-screen void (<em>hors-champ</em>). When an acousmatic sound emerges beyond the frame boundary, the system measures whether viewer fixation lingers on the primary subject or shifts toward the empty negative space. If unattended, the finite state machine executes an adaptive cut revealing the peripheral dread agent, accompanied by real-time audio cross-fading.
           </p>
         </div>
 
@@ -179,7 +186,7 @@
           <div class="text-xs font-mono text-zinc-500">PHASE I &bull; ARTISTIC INQUIRY</div>
           <h3 class="font-display text-lg text-zinc-200">Directorial Form & Negative Space</h3>
           <p class="text-zinc-400 text-sm leading-relaxed font-light">
-            Formulating aesthetic hypotheses on spatial tension, prolonged static wide-angle framing, and acousmatic dread through short-film directing. These artistic works served as the foundational inquiry into how cinema orchestrates psychological tension without explicit visual representation.
+            Formulating aesthetic hypotheses on spatial tension, prolonged static wide-angle framing, and acousmatic dread through short-film directing. These artistic works served as the foundational inquiry into how cinema directs psychological dread without explicit visual exposure.
           </p>
         </div>
 
@@ -205,71 +212,68 @@
 
       <div class="space-y-16">
         
-        <!-- Film 1 -->
+        <!-- Film 1: KATZE -->
         <div class="space-y-4">
-          <div class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl">
-            <iframe 
-              class="w-full h-full" 
-              src="https://www.youtube.com/embed/KV3MfWZAE9o" 
-              title="Cinematic Testbed 01" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-            </iframe>
-          </div>
+          <a href="https://youtu.be/KV3MfWZAE9o" target="_blank" class="group relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl block">
+            <img src="katze.jpg" alt="KATZE - Directed by Mahdi Najafi" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
+            <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">▶</div>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-zinc-950/80 px-2.5 py-1 rounded text-[10px] font-mono text-zinc-400 border border-zinc-800">
+              Watch on YouTube ↗
+            </div>
+          </a>
           <div class="space-y-2">
             <div class="flex justify-between items-baseline">
-              <h3 class="font-display text-lg font-medium text-zinc-100">Testbed 01: Spatial Dread & Static Wide Framing</h3>
-              <span class="text-xs font-mono text-zinc-500">Formal Exploration &bull; Off-Screen Space</span>
+              <h3 class="font-display text-lg font-medium text-zinc-100">KATZE</h3>
+              <span class="text-xs font-mono text-zinc-500">Written & Directed by Mahdi Najafi</span>
             </div>
             <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Explores severe negative space and sustained, static camera framing. By anchoring the lens on asymmetrical interior architectures, the mise-en-scène investigates spectator discomfort when key narrative actions occur outside the visual boundary. Served as primary reference footage for calculating visual dwell-time dispersion across empty regions.
+              Explores severe negative space, institutional sterile framing, and off-screen dread (<em>hors-champ</em>). Investigates spectator discomfort when psychological cues reside beyond the visible frame, serving as primary baseline stimuli for gaze-dispersion telemetry.
             </p>
           </div>
         </div>
 
-        <!-- Film 2 -->
+        <!-- Film 2: Acousmatic Voice -->
         <div class="space-y-4">
-          <div class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl">
-            <iframe 
-              class="w-full h-full" 
-              src="https://www.youtube.com/embed/6BzBNW4anBc" 
-              title="Cinematic Testbed 02" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-            </iframe>
-          </div>
+          <a href="https://youtu.be/6BzBNW4anBc" target="_blank" class="group relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl block">
+            <img src="https://img.youtube.com/vi/6BzBNW4anBc/hqdefault.jpg" alt="Acousmatic Voice and Attention Gating" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
+            <div class="absolute inset-0 bg-black/35 group-hover:bg-transparent transition flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">▶</div>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-zinc-950/80 px-2.5 py-1 rounded text-[10px] font-mono text-zinc-400 border border-zinc-800">
+              Watch on YouTube ↗
+            </div>
+          </a>
           <div class="space-y-2">
             <div class="flex justify-between items-baseline">
               <h3 class="font-display text-lg font-medium text-zinc-100">Testbed 02: Acousmatic Voice & Attention Gating</h3>
               <span class="text-xs font-mono text-zinc-500">Audio-Visual Dissociation &bull; Acousmêtre</span>
             </div>
             <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Inquires into acousmatic sound design where auditory sources remain deliberately hidden from the frame. The staging examines how sudden off-screen acoustic triggers induce rapid gaze shifts toward frame peripheries. These sequences directly informed the state-machine transition threshold in the real-time montage engine.
+              Inquires into acousmatic sound design where auditory sources remain deliberately hidden from the frame. The staging examines how sudden off-screen acoustic triggers induce rapid gaze shifts toward frame peripheries, informing the state-machine transition threshold in the montage engine.
             </p>
           </div>
         </div>
 
-        <!-- Film 3 -->
+        <!-- Film 3: Temporal Stasis -->
         <div class="space-y-4">
-          <div class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl">
-            <iframe 
-              class="w-full h-full" 
-              src="https://www.youtube.com/embed/4CBKHEKjKws" 
-              title="Cinematic Testbed 03" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-            </iframe>
-          </div>
+          <a href="https://youtu.be/4CBKHEKjKws" target="_blank" class="group relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl block">
+            <img src="https://img.youtube.com/vi/4CBKHEKjKws/hqdefault.jpg" alt="Temporal Stasis and Saccade Dynamics" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
+            <div class="absolute inset-0 bg-black/35 group-hover:bg-transparent transition flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">▶</div>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-zinc-950/80 px-2.5 py-1 rounded text-[10px] font-mono text-zinc-400 border border-zinc-800">
+              Watch on YouTube ↗
+            </div>
+          </a>
           <div class="space-y-2">
             <div class="flex justify-between items-baseline">
               <h3 class="font-display text-lg font-medium text-zinc-100">Testbed 03: Temporal Stasis & Fixation Restlessness</h3>
               <span class="text-xs font-mono text-zinc-500">Pacing &bull; Visual Saccade Dynamics</span>
             </div>
             <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Deploys prolonged shot durations to provoke viewer visual restlessness. By resisting standard rhythmic editing cuts, this work studies the point at which viewer gaze wanders away from the primary subject—a quantitative dynamic modeled in the profiler's temporal gaze-shift analytics.
+              Deploys prolonged shot durations to provoke viewer visual restlessness. By resisting standard rhythmic editing cuts, this work studies the point at which viewer gaze wanders away from the primary subject—a quantitative dynamic modeled in the profiler's dwell-time analytics.
             </p>
           </div>
         </div>
