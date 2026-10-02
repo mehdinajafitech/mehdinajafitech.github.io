@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10" />
+      <stop offset="60%" stop-color="#10141d" />
+      <stop offset="100%" stop-color="#080a0d" />
+    </linearGradient>
+
+    <!-- Heatmap Glow Gradients -->
+    <radialGradient id="heat-red" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff3b30" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#ff9500" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#ffcc00" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="heat-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#007aff" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#5856d6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="target-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#30d158" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#30d158" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- UI Card Glassmorphism -->
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="telemetry-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.04" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="675" fill="url(#bg-grad)" />
+  <rect width="1200" height="675" fill="url(#telemetry-grid)" />
+
+  <!-- Abstract Cinema Viewport (Left Side) -->
+  <g transform="translate(60, 75)">
+    <!-- Viewport Frame -->
+    <rect width="520" height="525" rx="16" fill="url(#card-grad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5" />
+    
+    <!-- Cinematic Aspect Ratio Placeholder Screen -->
+    <rect x="25" y="25" width="470" height="264" rx="8" fill="#040608" stroke="#ffffff" stroke-opacity="0.08" />
+    
+    <!-- Rule of Thirds Lines -->
+    <line x1="181" y1="25" x2="181" y2="289" stroke="#ffffff" stroke-opacity="0.07" stroke-dasharray="4,4" />
+    <line x1="338" y1="25" x2="338" y2="289" stroke="#ffffff" stroke-opacity="0.07" stroke-dasharray="4,4" />
+    <line x1="25" y1="113" x2="495" y2="113" stroke="#ffffff" stroke-opacity="0.07" stroke-dasharray="4,4" />
+    <line x1="25" y1="201" x2="495" y2="201" stroke="#ffffff" stroke-opacity="0.07" stroke-dasharray="4,4" />
+
+    <!-- Simulated Gaussian Gaze Density Heatmap -->
+    <circle cx="340" cy="115" r="90" fill="url(#heat-blue)" />
+    <circle cx="350" cy="110" r="55" fill="url(#heat-red)" />
+
+    <!-- Eye Tracking Vector Scanpaths & Fixation Nodes -->
+    <path d="M 120 220 Q 210 170 335 118" fill="none" stroke="#30d158" stroke-width="2" stroke-opacity="0.8" stroke-dasharray="5,3" />
+    <circle cx="120" cy="220" r="14" fill="url(#target-glow)" />
+    <circle cx="120" cy="220" r="5" fill="#30d158" />
+    <circle cx="335" cy="118" r="7" fill="#ff453a" />
+
+    <!-- Viewfinder Crosshairs and Annotations -->
+    <circle cx="335" cy="118" r="18" fill="none" stroke="#ff453a" stroke-width="1.5" stroke-opacity="0.8" />
+    <text x="360" y="112" fill="#ff453a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1">GAZE LOCK: NEGATIVE SPACE</text>
+    
+    <text x="140" y="235" fill="#30d158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1">TARGET FOCUS</text>
+
+    <!-- Telemetry Mini-Panels (Bottom of Left Card) -->
+    <g transform="translate(25, 310)">
+      <!-- Gaze Shift Dynamics Graph Box -->
+      <rect width="225" height="185" rx="8" fill="#06090e" stroke="#ffffff" stroke-opacity="0.06" />
+      <text x="15" y="24" fill="#8e8e93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="0.8">TEMPORAL DYNAMICS</text>
+      <!-- Wave / Shift Line -->
+      <path d="M 15 140 C 50 140, 60 70, 95 70 C 130 70, 140 120, 180 120 L 210 50" fill="none" stroke="#5e5ce6" stroke-width="2" />
+      <circle cx="210" cy="50" r="4" fill="#5e5ce6" />
+      <text x="15" y="165" fill="#636366" font-family="monospace" font-size="8">Adaptive Cut Triggered</text>
+
+      <!-- Role Distribution Box -->
+      <g transform="translate(245, 0)">
+        <rect width="225" height="185" rx="8" fill="#06090e" stroke="#ffffff" stroke-opacity="0.06" />
+        <text x="15" y="24" fill="#8e8e93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="0.8">ATTENTION METRICS</text>
+        
+        <!-- Bar 1: Target Character -->
+        <text x="15" y="65" fill="#d1d1d6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Target Character</text>
+        <rect x="15" y="75" width="195" height="6" rx="3" fill="#1c1c1e" />
+        <rect x="15" y="75" width="125" height="6" rx="3" fill="#30d158" />
+
+        <!-- Bar 2: Dread Agent -->
+        <text x="15" y="105" fill="#d1d1d6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Dread Agent</text>
+        <rect x="15" y="115" width="195" height="6" rx="3" fill="#1c1c1e" />
+        <rect x="15" y="115" width="85" height="6" rx="3" fill="#af52de" />
+
+        <!-- Bar 3: Negative Space -->
+        <text x="15" y="145" fill="#d1d1d6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Negative Space</text>
+        <rect x="15" y="155" width="195" height="6" rx="3" fill="#1c1c1e" />
+        <rect x="15" y="155" width="160" height="6" rx="3" fill="#ff453a" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Typography & Project Description (Right Side) -->
+  <g transform="translate(630, 115)">
+    <!-- Discipline Badge -->
+    <rect width="250" height="28" rx="14" fill="#5e5ce6" fill-opacity="0.15" stroke="#5e5ce6" stroke-opacity="0.4" />
+    <text x="16" y="18" fill="#a5a4ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">COMPUTATIONAL MEDIA &amp; HCI</text>
+
+    <!-- Main Project Title -->
+    <text x="0" y="85" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">Gaze-Contingent</text>
+    <text x="0" y="135" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">Interactive Montage</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="185" fill="#98989d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" line-height="1.5">
+      Bridging Formal Film Theory with Real-Time
+    </text>
+    <text x="0" y="212" fill="#98989d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400">
+      Computer Vision &amp; Spectator Cognitive Analytics
+    </text>
+
+    <!-- Divider Line -->
+    <line x1="0" y1="245" x2="480" y2="245" stroke="#ffffff" stroke-opacity="0.1" />
+
+    <!-- Pipeline Tags Section -->
+    <text x="0" y="280" fill="#636366" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">KEY ARCHITECTURE &amp; METHODOLOGY</text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(0, 300)">
+      <!-- Badge 1: MediaPipe -->
+      <rect x="0" y="0" width="130" height="32" rx="6" fill="#161b22" stroke="#30363d" />
+      <circle cx="14" cy="16" r="3.5" fill="#30d158" />
+      <text x="26" y="20" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">MediaPipe Mesh</text>
+
+      <!-- Badge 2: DeepLabV3 -->
+      <rect x="142" y="0" width="170" height="32" rx="6" fill="#161b22" stroke="#30363d" />
+      <circle cx="156" cy="16" r="3.5" fill="#af52de" />
+      <text x="168" y="20" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">DeepLabV3 Isolation</text>
+
+      <!-- Badge 3: Adaptive Cut -->
+      <rect x="324" y="0" width="150" height="32" rx="6" fill="#161b22" stroke="#30363d" />
+      <circle cx="338" cy="16" r="3.5" fill="#ff453a" />
+      <text x="350" y="20" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">Adaptive Montage</text>
+    </g>
+
+    <!-- Research Context Info -->
+    <g transform="translate(0, 360)">
+      <rect x="0" y="0" width="480" height="70" rx="8" fill="#12161f" stroke="#ffffff" stroke-opacity="0.05" />
+      <text x="20" y="28" fill="#8e8e93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">RESEARCH FOCUS:</text>
+      <text x="20" y="48" fill="#f2f2f7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">
+        Spectator Gaze Telemetry • Spatial Tension • Dynamic Dual-Audio
+      </text>
+    </g>
+  </g>
+</svg>
