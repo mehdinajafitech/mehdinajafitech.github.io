@@ -171,24 +171,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Interactive Analytics Preview -->
-      <div class="space-y-4 pt-4">
-        <div class="flex items-center justify-between border-b border-zinc-900 pb-2">
-          <h3 class="font-display text-sm font-medium text-zinc-200">Empirical Telemetry &amp; Profiling</h3>
-          <div class="flex gap-4 font-mono text-xs">
-            <button onclick="toggleTab('heatmap')" id="btn-heatmap" class="text-zinc-100 underline underline-offset-4">Gaussian Density Heatmap</button>
-            <button onclick="toggleTab('temporal')" id="btn-temporal" class="text-zinc-500 hover:text-zinc-300">Temporal Gaze Shift</button>
-          </div>
-        </div>
-
-        <div id="view-heatmap" class="aspect-[21/9] bg-zinc-950 rounded border border-zinc-900 flex items-center justify-center text-xs font-mono text-zinc-600">
-          <span>[ 2D Spatial Gaze Density Heatmap &bull; Gaussian Kernel ]</span>
-        </div>
-        <div id="view-temporal" class="hidden aspect-[21/9] bg-zinc-950 rounded border border-zinc-900 flex items-center justify-center text-xs font-mono text-zinc-600">
-          <span>[ Chronological Fixation Transition Plot &bull; Pre/Post Cut ]</span>
-        </div>
-      </div>
     </section>
 
     <!-- The Research Arc -->
@@ -330,26 +312,6 @@
           allowfullscreen>
         </iframe>
       `;
-    }
-
-    // Analytics Preview Tab Switcher
-    function toggleTab(tab) {
-      const heatmap = document.getElementById('view-heatmap');
-      const temporal = document.getElementById('view-temporal');
-      const btnHeatmap = document.getElementById('btn-heatmap');
-      const btnTemporal = document.getElementById('btn-temporal');
-
-      if (tab === 'heatmap') {
-        heatmap.classList.remove('hidden');
-        temporal.classList.add('hidden');
-        btnHeatmap.className = 'text-zinc-100 underline underline-offset-4';
-        btnTemporal.className = 'text-zinc-500 hover:text-zinc-300';
-      } else {
-        temporal.classList.remove('hidden');
-        heatmap.classList.add('hidden');
-        btnTemporal.className = 'text-zinc-100 underline underline-offset-4';
-        btnHeatmap.className = 'text-zinc-500 hover:text-zinc-300';
-      }
     }
   </script>
 </body>
