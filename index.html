@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mahdi Najafi — Academic portfolio investigating formalist cinema, off-screen space, and gaze-contingent adaptive editing systems.">
-  <title>Mahdi Najafi — Computational Media & Cinematic Systems</title>
+  <title>Mahdi Najafi — Computational Media &amp; Cinematic Systems</title>
   
   <!-- Editorial Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,30 +89,23 @@
       <div class="border-b border-zinc-900 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
           <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Research Prototype &bull; Practice-Based Testbed</span>
-          <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">A Closed-Loop Cinematic System: From Cognitive Attention Profiling to Gaze-Contingent Montage</h2>
+          <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">A Closed-Loop System: Cognitive Film Analytics to Gaze-Contingent Montage</h2>
         </div>
         <div class="text-xs font-mono text-zinc-500">
           PyTorch &bull; MediaPipe &bull; OpenCV (Real-Time Pipeline)
         </div>
       </div>
 
-      <!-- Frameless Cinematic Video Player (Inline Click-to-Play) -->
+      <!-- Frameless Cinematic Video Player (Inline Click-to-Play Facade) -->
       <div class="space-y-3">
-        <div id="video-container" class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-2xl group cursor-pointer" onclick="playDemoVideo()">
+        <div id="demo-player-box" class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-2xl group cursor-pointer" onclick="startInlineDemo()">
           
-          <!-- Native HTML5 Video -->
-          <video 
-            id="demo-video" 
-            preload="metadata"
-            class="w-full h-full object-cover">
-            <source src="assets/Gaze_Contingent_Montage_Demo_MahdiNajafi.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <!-- Poster Image -->
+          <img src="POCMAIN.jpg" alt="System Prototype Poster" class="absolute inset-0 w-full h-full object-cover">
 
-          <!-- Poster Overlay with Play Trigger -->
-          <div id="demo-overlay" class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-            <img src="POCMAIN.jpg" alt="System Prototype Poster" class="absolute inset-0 w-full h-full object-cover -z-10">
-            <div class="w-16 h-16 rounded-full bg-zinc-950/80 border border-zinc-700/80 backdrop-blur-md text-zinc-100 flex items-center justify-center text-xl pl-1 group-hover:scale-110 group-hover:border-zinc-400 transition duration-300 shadow-2xl">
+          <!-- Play Button Overlay -->
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-zinc-950/85 border border-zinc-700/80 backdrop-blur-md text-zinc-100 flex items-center justify-center text-xl pl-1 group-hover:scale-110 group-hover:border-zinc-400 transition duration-300 shadow-2xl">
               &#9654;
             </div>
             <span class="absolute bottom-3 left-3 bg-zinc-950/85 px-2.5 py-1 rounded text-[11px] font-mono text-zinc-300 border border-zinc-800">
@@ -217,7 +210,7 @@
       </div>
     </section>
 
-    <!-- Directorial Testbeds (The 3 Short Films) -->
+    <!-- Cinematic Testbeds (The 3 Embedded Short Films) -->
     <section id="testbeds" class="space-y-12">
       <div class="border-b border-zinc-900 pb-4">
         <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Phase I &bull; Cinematic Stimuli</span>
@@ -316,37 +309,16 @@
   </main>
 
   <script>
-    // Inline Demo Video Playback Controller
-    function playDemoVideo() {
-      const container = document.getElementById('video-container');
-      const video = document.getElementById('demo-video');
-      const overlay = document.getElementById('demo-overlay');
-
-      if (overlay) {
-        overlay.classList.add('hidden');
-        container.classList.remove('cursor-pointer');
-        container.removeAttribute('onclick');
-        video.setAttribute('controls', 'true');
-        
-        const playPromise = video.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(error => {
-            // Fallback to inline YouTube player if local MP4 fails to stream or is missing
-            console.warn('Local MP4 playback failed, loading YouTube inline player:', error);
-            loadInlineYouTube();
-          });
-        }
-      }
-    }
-
-    function loadInlineYouTube() {
-      const container = document.getElementById('video-container');
-      container.innerHTML = `
+    // Inline Demo Video Facade Controller
+    function startInlineDemo() {
+      const box = document.getElementById('demo-player-box');
+      box.removeAttribute('onclick');
+      box.classList.remove('cursor-pointer', 'group');
+      box.innerHTML = `
         <iframe 
-          class="w-full h-full" 
-          src="https://www.youtube-nocookie.com/embed/qe_YFupHu-s?autoplay=1&rel=0&modestbranding=1" 
+          class="w-full h-full block border-0" 
+          src="https://www.youtube.com/embed/qe_YFupHu-s?autoplay=1&rel=0&modestbranding=1&playsinline=1" 
           title="System Demonstration Run" 
-          frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
