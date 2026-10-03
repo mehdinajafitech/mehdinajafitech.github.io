@@ -51,7 +51,7 @@
       <nav class="flex items-center space-x-6 text-zinc-400 font-mono">
         <a href="#prototype" class="hover:text-zinc-100 transition">Flagship System</a>
         <a href="#arc" class="hover:text-zinc-100 transition">Research Arc</a>
-        <a href="#testbeds" class="hover:text-zinc-100 transition">Directorial Testbeds</a>
+        <a href="#testbeds" class="hover:text-zinc-100 transition">Cinematic Testbeds</a>
         <a href="#contact" class="hover:text-zinc-100 transition">Contact</a>
       </nav>
     </div>
@@ -63,7 +63,7 @@
     <section class="space-y-8 pt-4">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-mono text-zinc-400">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-        Researcher & Filmmaker · Computational Media & HCI
+        Researcher &amp; Filmmaker · Computational Media &amp; HCI
       </div>
 
       <h1 class="font-display text-4xl sm:text-5xl font-semibold text-zinc-100 tracking-tight leading-[1.15]">
@@ -75,46 +75,55 @@
       </p>
 
       <div class="pt-2 flex items-center gap-6 text-xs font-mono">
-        <a href="#prototype" class="px-4 py-2.5 bg-zinc-100 text-zinc-950 font-medium rounded hover:bg-white transition">
-          Examine Prototype Overview &darr;
+        <a href="#prototype" class="px-4 py-2.5 bg-zinc-100 text-zinc-950 font-medium rounded hover:bg-white transition shadow-sm">
+          Explore System Prototype &darr;
         </a>
         <a href="#testbeds" class="text-zinc-400 hover:text-zinc-100 transition">
-          Directorial Testbeds &rarr;
+          Cinematic Testbeds &rarr;
         </a>
       </div>
     </section>
 
-    <!-- The Flagship System (Archival Case Study) -->
+    <!-- The Flagship System (Research Prototype) -->
     <section id="prototype" class="space-y-12">
       <div class="border-b border-zinc-900 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
-          <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Doctoral Prototype &bull; Archival Case Study</span>
-          <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">A Closed-Loop Cinematic System: From Cognitive Attention Profiling to  &amp; Gaze-Contingent Montage </h2>
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Research Prototype &bull; Practice-Based Testbed</span>
+          <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">A Closed-Loop Cinematic System: From Cognitive Attention Profiling to Gaze-Contingent Montage</h2>
         </div>
         <div class="text-xs font-mono text-zinc-500">
-          PyTorch &bull; MediaPipe &bull; OpenCV &bull; solvePnP
+          PyTorch &bull; MediaPipe &bull; OpenCV (Real-Time Pipeline)
         </div>
       </div>
 
-      <!-- Frameless Cinematic Video Player (Self-hosted MP4 with Poster & External Link) -->
+      <!-- Frameless Cinematic Video Player (Inline Click-to-Play) -->
       <div class="space-y-3">
-        <div class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-2xl">
+        <div id="video-container" class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-2xl group cursor-pointer" onclick="playDemoVideo()">
+          
+          <!-- Native HTML5 Video -->
           <video 
-            controls 
-            poster="POCMAIN.jpg" 
+            id="demo-video" 
             preload="metadata"
             class="w-full h-full object-cover">
             <source src="assets/Gaze_Contingent_Montage_Demo_MahdiNajafi.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+
+          <!-- Poster Overlay with Play Trigger -->
+          <div id="demo-overlay" class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+            <img src="POCMAIN.jpg" alt="System Prototype Poster" class="absolute inset-0 w-full h-full object-cover -z-10">
+            <div class="w-16 h-16 rounded-full bg-zinc-950/80 border border-zinc-700/80 backdrop-blur-md text-zinc-100 flex items-center justify-center text-xl pl-1 group-hover:scale-110 group-hover:border-zinc-400 transition duration-300 shadow-2xl">
+              &#9654;
+            </div>
+            <span class="absolute bottom-3 left-3 bg-zinc-950/85 px-2.5 py-1 rounded text-[11px] font-mono text-zinc-300 border border-zinc-800">
+              Click to Play Interactive Run
+            </span>
+          </div>
         </div>
         
         <div class="flex justify-between items-center text-xs font-mono text-zinc-500 px-1">
           <span>Figure 1: 59-second proof-of-concept run (1080p, 60fps)</span>
-          <div class="flex items-center gap-4">
-            <a href="https://youtu.be/qe_YFupHu-s" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition underline underline-offset-2">Watch on YouTube &nearr;</a>
-            <span>Dual-Stream Latency: &lt; 35ms</span>
-          </div>
+          <span class="text-emerald-500/90 font-medium">Dual-Stream Latency: &lt; 35ms</span>
         </div>
       </div>
 
@@ -208,11 +217,11 @@
       </div>
     </section>
 
-    <!-- Directorial Testbeds (The 3 Embedded Short Films) -->
+    <!-- Directorial Testbeds (The 3 Short Films) -->
     <section id="testbeds" class="space-y-12">
       <div class="border-b border-zinc-900 pb-4">
         <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Phase I &bull; Cinematic Stimuli</span>
-        <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">Directorial Works as Research Testbeds</h2>
+        <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">Cinematic Works as Research Testbeds</h2>
         <p class="text-zinc-400 text-sm font-light mt-1">
           Experimental short films directed to investigate spatial absence, off-screen dread, and spectator fixation dynamics prior to computational automation.
         </p>
@@ -228,7 +237,7 @@
               <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">&#9654;</div>
             </div>
             <div class="absolute bottom-3 left-3 bg-zinc-950/80 px-2.5 py-1 rounded text-[10px] font-mono text-zinc-400 border border-zinc-800">
-              Watch on YouTube &nearr;
+              Watch Film ↗
             </div>
           </a>
           <div class="space-y-2">
@@ -250,7 +259,7 @@
               <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">&#9654;</div>
             </div>
             <div class="absolute bottom-3 left-3 bg-zinc-950/80 px-2.5 py-1 rounded text-[10px] font-mono text-zinc-400 border border-zinc-800">
-              Watch on YouTube &nearr;
+              Watch Film ↗
             </div>
           </a>
           <div class="space-y-2">
@@ -272,7 +281,7 @@
               <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">&#9654;</div>
             </div>
             <div class="absolute bottom-3 left-3 bg-zinc-950/80 px-2.5 py-1 rounded text-[10px] font-mono text-zinc-400 border border-zinc-800">
-              Watch on YouTube &nearr;
+              Watch Film ↗
             </div>
           </a>
           <div class="space-y-2">
@@ -299,7 +308,7 @@
       </div>
 
       <div class="flex flex-col sm:items-end space-y-2 text-zinc-400">
-        <a href="https://github.com/mehdinajafitech" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-100 transition">github.com/mehdinajafitech &nearr;</a>
+        <a href="https://github.com/mehdinajafitech" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-100 transition">github.com/mehdinajafitech ↗</a>
         <span class="text-zinc-600">Tabriz, Iran</span>
       </div>
     </section>
@@ -307,6 +316,44 @@
   </main>
 
   <script>
+    // Inline Demo Video Playback Controller
+    function playDemoVideo() {
+      const container = document.getElementById('video-container');
+      const video = document.getElementById('demo-video');
+      const overlay = document.getElementById('demo-overlay');
+
+      if (overlay) {
+        overlay.classList.add('hidden');
+        container.classList.remove('cursor-pointer');
+        container.removeAttribute('onclick');
+        video.setAttribute('controls', 'true');
+        
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            // Fallback to inline YouTube player if local MP4 fails to stream or is missing
+            console.warn('Local MP4 playback failed, loading YouTube inline player:', error);
+            loadInlineYouTube();
+          });
+        }
+      }
+    }
+
+    function loadInlineYouTube() {
+      const container = document.getElementById('video-container');
+      container.innerHTML = `
+        <iframe 
+          class="w-full h-full" 
+          src="https://www.youtube-nocookie.com/embed/qe_YFupHu-s?autoplay=1&rel=0&modestbranding=1" 
+          title="System Demonstration Run" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      `;
+    }
+
+    // Analytics Preview Tab Switcher
     function toggleTab(tab) {
       const heatmap = document.getElementById('view-heatmap');
       const temporal = document.getElementById('view-temporal');
