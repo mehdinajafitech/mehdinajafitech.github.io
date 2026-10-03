@@ -51,7 +51,7 @@
       <nav class="flex items-center space-x-6 text-zinc-400 font-mono">
         <a href="#prototype" class="hover:text-zinc-100 transition">Flagship System</a>
         <a href="#arc" class="hover:text-zinc-100 transition">Research Arc</a>
-        <a href="#testbeds" class="hover:text-zinc-100 transition">Cinematic Testbeds</a>
+        <a href="#works" class="hover:text-zinc-100 transition">Directorial Works</a>
         <a href="#contact" class="hover:text-zinc-100 transition">Contact</a>
       </nav>
     </div>
@@ -78,8 +78,8 @@
         <a href="#prototype" class="px-4 py-2.5 bg-zinc-100 text-zinc-950 font-medium rounded hover:bg-white transition shadow-sm">
           Explore System Prototype &darr;
         </a>
-        <a href="#testbeds" class="text-zinc-400 hover:text-zinc-100 transition">
-          Cinematic Testbeds &rarr;
+        <a href="#works" class="text-zinc-400 hover:text-zinc-100 transition">
+          Directorial Works &rarr;
         </a>
       </div>
     </section>
@@ -88,11 +88,11 @@
     <section id="prototype" class="space-y-12">
       <div class="border-b border-zinc-900 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
-          <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Research Prototype &bull; Practice-Based Testbed</span>
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Research Prototype &bull; Practice-Based System</span>
           <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">A Closed-Loop System: Cognitive Film Analytics to Gaze-Contingent Montage</h2>
         </div>
         <div class="text-xs font-mono text-zinc-500">
-          PyTorch &bull; MediaPipe &bull; OpenCV (Real-Time Pipeline)
+          PyTorch &bull; MediaPipe &bull; OpenCV (Real-Time Gaze Pipeline)
         </div>
       </div>
 
@@ -103,7 +103,7 @@
           class="relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-2xl cursor-pointer group select-none"
           onclick="playDemoVideo()">
           
-          <!-- Poster Image with Automatic YouTube Fallback -->
+          <!-- Poster Image with Automatic Fallback -->
           <img 
             src="POCMAIN.jpg" 
             onerror="this.onerror=null; this.src='https://img.youtube.com/vi/qe_YFupHu-s/maxresdefault.jpg';" 
@@ -132,22 +132,22 @@
         <div class="bg-obsidian p-4 space-y-1">
           <div class="text-zinc-500 text-[10px] uppercase">Gaze Tracking</div>
           <div class="text-zinc-100 text-lg font-medium">60 FPS</div>
-          <div class="text-zinc-500 text-[11px]">Real-time PnP loop</div>
+          <div class="text-zinc-500 text-[11px]">Hybrid Pose &amp; Iris Loop</div>
         </div>
         <div class="bg-obsidian p-4 space-y-1">
-          <div class="text-zinc-500 text-[10px] uppercase">Backbone Model</div>
-          <div class="text-zinc-100 text-lg font-medium">DeepLabV3</div>
-          <div class="text-zinc-500 text-[11px]">ResNet-101 Async</div>
+          <div class="text-zinc-500 text-[10px] uppercase">Generative Media</div>
+          <div class="text-zinc-100 text-lg font-medium">Dual-Stream</div>
+          <div class="text-zinc-500 text-[11px]">Buffered GenAI Rushes</div>
         </div>
         <div class="bg-obsidian p-4 space-y-1">
-          <div class="text-zinc-500 text-[10px] uppercase">Calibration Loss</div>
-          <div class="text-zinc-100 text-lg font-medium">&lt; 0.038 MSE</div>
-          <div class="text-zinc-500 text-[11px]">Poly Ridge Reg</div>
+          <div class="text-zinc-500 text-[10px] uppercase">Angular Accuracy</div>
+          <div class="text-zinc-100 text-lg font-medium">&lt; 1.4&deg; Error</div>
+          <div class="text-zinc-500 text-[11px]">Poly Ridge Reg (~32px)</div>
         </div>
         <div class="bg-obsidian p-4 space-y-1">
           <div class="text-zinc-500 text-[10px] uppercase">Aesthetic Match</div>
           <div class="text-zinc-100 text-lg font-medium">Reinhard LAB</div>
-          <div class="text-zinc-500 text-[11px]">Inter-shot color parity</div>
+          <div class="text-zinc-500 text-[11px]">GenAI Color Parity</div>
         </div>
       </div>
 
@@ -156,18 +156,18 @@
         <div class="space-y-4">
           <h3 class="font-display text-base font-medium text-zinc-200">Aesthetic Hypothesis &amp; Interactive Logic</h3>
           <p class="text-zinc-400 text-sm leading-relaxed font-light">
-            Drawing upon formalist film theory, the engine operationalizes the off-screen void (<em>hors-champ</em>). When an acousmatic sound emerges beyond the frame boundary, the system measures whether viewer fixation lingers on the primary subject or shifts toward the empty negative space. If unattended, the finite state machine executes an adaptive cut revealing the peripheral dread agent, accompanied by real-time audio cross-fading.
+            Drawing upon formalist film theory, the engine operationalizes off-screen spatial tension (<em>hors-champ</em>) using generative video rushes. When an acousmatic auditory cue emerges beyond the visible frame, the system measures whether spectator gaze reorients toward the expectant negative space or remains fixated on the primary subject. If the peripheral void remains unattended beyond a calibrated temporal threshold, the finite state machine triggers an adaptive de-acousmatizing cut to confront the viewer with the off-screen threat, while a real-time Reinhard color transfer pipeline mitigates generative inter-shot visual drift.
           </p>
         </div>
 
         <div class="space-y-4">
           <h3 class="font-display text-base font-medium text-zinc-200">System Architecture Pipeline</h3>
           <div class="text-xs font-mono space-y-2 text-zinc-400 bg-surface/50 p-4 rounded border border-zinc-900">
-            <div><span class="text-zinc-500">01. Capture:</span> RGB Video Stream &rarr; 468-point Iris Mesh</div>
-            <div><span class="text-zinc-500">02. Pose:</span> 3D solvePnP Head Stabilization &amp; EAR Gating</div>
+            <div><span class="text-zinc-500">01. Capture:</span> RGB Video Stream &rarr; 478-point Iris &amp; Face Mesh</div>
+            <div><span class="text-zinc-500">02. Pose &amp; Gating:</span> 3D solvePnP Stabilization &amp; EAR Blink Filtering</div>
             <div><span class="text-zinc-500">03. Calibration:</span> 2nd-degree Polynomial Ridge Regression</div>
-            <div><span class="text-zinc-500">04. Perception:</span> Asynchronous GPU Semantic Segmentation</div>
-            <div><span class="text-zinc-500">05. Execution:</span> Reactive Dual-Stream Montage &amp; Audio Mixing</div>
+            <div><span class="text-zinc-500">04. Perception:</span> Asynchronous ROI Semantic Parsing on GenAI Rushes</div>
+            <div><span class="text-zinc-500">05. Execution:</span> Reactive Dual-Stream Switch &amp; Reinhard LAB Color Harmonization</div>
           </div>
         </div>
       </div>
@@ -203,27 +203,27 @@
           <div class="text-xs font-mono text-zinc-500">PHASE I &bull; ARTISTIC INQUIRY</div>
           <h3 class="font-display text-lg text-zinc-200">Directorial Form &amp; Negative Space</h3>
           <p class="text-zinc-400 text-sm leading-relaxed font-light">
-            Formulating aesthetic hypotheses on spatial tension, prolonged static wide-angle framing, and acousmatic dread through short-film directing. These artistic works served as the foundational inquiry into how cinema directs psychological dread without explicit visual exposure.
+            Formulating aesthetic hypotheses on spatial tension, prolonged static wide-angle framing, and acousmatic dread through short-film directing. These artistic works serve as the foundational cinematic inquiry into how framing manipulates psychological dread without explicit visual exposure.
           </p>
         </div>
 
         <div class="space-y-3">
           <div class="text-xs font-mono text-zinc-500">PHASE II &bull; COMPUTATIONAL TURN</div>
-          <h3 class="font-display text-lg text-zinc-200">Empirical Sensing &amp; Adaptive Media</h3>
+          <h3 class="font-display text-lg text-zinc-200">Generative Media &amp; Adaptive Montage</h3>
           <p class="text-zinc-400 text-sm leading-relaxed font-light">
-            Translating authored directorial intuition into quantitative parameters: deploying gaze telemetry and semantic segmentation to measure spectator visual dwell time, replacing static timelines with reactive computational montage systems.
+            Translating authored directorial intuition into quantitative parameters: pairing generative video synthesis with gaze telemetry to dynamically structure montage, replacing static timelines with reactive computational editing systems.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Cinematic Testbeds -->
-    <section id="testbeds" class="space-y-12">
+    <!-- Directorial Works (Aesthetic Foundations) -->
+    <section id="works" class="space-y-12">
       <div class="border-b border-zinc-900 pb-4">
-        <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Phase I &bull; Cinematic Stimuli</span>
-        <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">Cinematic Works as Research Testbeds</h2>
+        <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Phase I &bull; Cinematic Practice</span>
+        <h2 class="font-display text-2xl font-medium text-zinc-100 mt-1">Selected Directorial Works: Aesthetic Foundations</h2>
         <p class="text-zinc-400 text-sm font-light mt-1">
-          Experimental short films directed to investigate spatial absence, off-screen dread, and spectator fixation dynamics prior to computational automation.
+          Authored short films investigating spatial tension, negative framing, and off-screen absence that established the directorial principles underlying the computational architecture.
         </p>
       </div>
 
@@ -246,7 +246,7 @@
               <span class="text-xs font-mono text-zinc-500">Written &amp; Directed by Mahdi Najafi</span>
             </div>
             <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Explores severe negative space, institutional sterile framing, and off-screen dread (<em>hors-champ</em>). Investigates spectator discomfort when psychological cues reside beyond the visible frame, serving as primary baseline stimuli for gaze-dispersion telemetry.
+              Explores severe negative space, institutional sterile framing, and off-screen dread (<em>hors-champ</em>). Investigates spectator discomfort when narrative cues reside beyond the visible frame, defining the spatial framing logic later operationalized in the adaptive system.
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@
         <!-- Film 2: Acousmatic Voice -->
         <div class="space-y-4">
           <a href="https://youtu.be/6BzBNW4anBc" target="_blank" rel="noopener noreferrer" class="group relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl block">
-            <img src="katze.jpg" alt="Acousmatic Voice and Attention Gating" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
+            <img src="katze.jpg" alt="Acousmatic Voice Inquiry" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
             <div class="absolute inset-0 bg-black/35 group-hover:bg-transparent transition flex items-center justify-center">
               <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">&#9654;</div>
             </div>
@@ -264,11 +264,11 @@
           </a>
           <div class="space-y-2">
             <div class="flex justify-between items-baseline">
-              <h3 class="font-display text-lg font-medium text-zinc-100">Testbed 02: Acousmatic Voice &amp; Attention Gating</h3>
+              <h3 class="font-display text-lg font-medium text-zinc-100">Directorial Study: Acousmatic Voice &amp; Presence</h3>
               <span class="text-xs font-mono text-zinc-500">Audio-Visual Dissociation &bull; Acousm&ecirc;tre</span>
             </div>
             <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Inquires into acousmatic sound design where auditory sources remain deliberately hidden from the frame. The staging examines how sudden off-screen acoustic triggers induce rapid gaze shifts toward frame peripheries, informing the state-machine transition threshold in the montage engine.
+              Inquires into acousmatic sound design where auditory sources remain hidden from the frame. Examines how off-screen acoustic triggers induce viewer anticipation, informing the state-machine transition threshold implemented in the montage engine.
             </p>
           </div>
         </div>
@@ -276,7 +276,7 @@
         <!-- Film 3: Temporal Stasis -->
         <div class="space-y-4">
           <a href="https://youtu.be/qe_YFupHu-s" target="_blank" rel="noopener noreferrer" class="group relative aspect-video w-full bg-black rounded-lg overflow-hidden border border-zinc-900 shadow-xl block">
-            <img src="RunningDark.png" alt="Temporal Stasis and Saccade Dynamics" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
+            <img src="RunningDark.png" alt="Temporal Stasis Study" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-500">
             <div class="absolute inset-0 bg-black/35 group-hover:bg-transparent transition flex items-center justify-center">
               <div class="w-12 h-12 rounded-full bg-zinc-950/80 border border-zinc-700 text-zinc-200 flex items-center justify-center text-sm pl-1 group-hover:scale-110 transition shadow-lg">&#9654;</div>
             </div>
@@ -286,11 +286,11 @@
           </a>
           <div class="space-y-2">
             <div class="flex justify-between items-baseline">
-              <h3 class="font-display text-lg font-medium text-zinc-100">Testbed 03: Temporal Stasis &amp; Fixation Restlessness</h3>
+              <h3 class="font-display text-lg font-medium text-zinc-100">Directorial Study: Temporal Stasis &amp; Gaze Restlessness</h3>
               <span class="text-xs font-mono text-zinc-500">Pacing &bull; Visual Saccade Dynamics</span>
             </div>
             <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Deploys prolonged shot durations to provoke viewer visual restlessness. By resisting standard rhythmic editing cuts, this work studies the point at which viewer gaze wanders away from the primary subject—a quantitative dynamic modeled in the profiler's dwell-time analytics.
+              Deploys prolonged shot durations to provoke viewer visual restlessness. By withholding conventional cutting rates, this inquiry studies the point at which spectator attention wanders across the frame—a dynamic formalized in the dwell-time metrics of the system.
             </p>
           </div>
         </div>
@@ -316,7 +316,7 @@
   </main>
 
   <script>
-    // Inline YouTube Video Loader (Guaranteed In-Place Playback)
+    // Inline Demo Video Loader
     function playDemoVideo() {
       const box = document.getElementById('demo-player');
       box.removeAttribute('onclick');
